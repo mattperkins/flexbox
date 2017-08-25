@@ -1,0 +1,120 @@
+@import style-baselines
+// LET THERE BE JUSTICE
+// size 
+#size
+  position: absolute
+  top: 0
+  right: 7px
+  +meri(1.3, 100, 1.6, $notBlack)
+//
+$reset-font:          $neue, sans-serif
+$reset-font-size:     62.5%
+$reset-line-height:   1.625
+$reset-margin:        0 // 2.4rem golden ratio for descendants 
+$reset-padding:       0 // 4.8rem golden ratio for descendants
+$reset-body-bg:       lighten(#eee, 5%)
+html
+  font-size:    $reset-font-size
+  +break(800px, 0)
+    font-size: 90%
+  +break(1099px, 801px)
+    font-size: 92.5%
+  +break(1599px, 1100px)
+    font-size: 95%
+  +break(3000px, 1600px)
+    font-size: 125%
+body
+  font-size: 1.6em // 16px
+  line-height:  $reset-line-height
+  font-family:  $reset-font
+  +meri(1.6, 100, 1.6, $notBlack)
+  margin:       $reset-margin
+  padding:      4.8rem
+  +break(800px)
+    padding: 1.5rem
+  background-color: $reset-body-bg
+
+.logonav
+  +logonav
+
+// 1201 > 1499px width/max-width blackhole
+
+.container
+  max-width: 1200px
+  +break(1600px)
+    max-width: 1500px
+  margin: 0 auto
+.grid
+  display: flex
+  +break(1000px)
+    flex-direction: column
+    align-items: stretch
+  margin: 2.4rem 0
+.c25
+  flex: 1
+.c50
+  +break(1000px)
+    margin-right: 0
+  flex: 2
+  &:nth-child(2)
+    +margins(0,0,0,4.8)
+  +break(1000px)
+    &:nth-child(2)
+      margin: 2.4rem 0
+
+
+    
+// **************************************************
+// PAGE 2
+// **************************************************
+
+.wrapper
+  width: 100%
+  max-width: 1140px
+  margin: 0 auto
+  border: 1px solid red
+  padding: 10px
+
+section
+  display: flex 
+  +break(800px)
+    flex-direction: column
+  align-items: center
+  justify-content: center
+  img
+    border-radius: 50%
+  figcaption
+    font-size: .6em 
+    text-align: center
+    padding-top: 10px
+
+header
+  background-color: $banana
+section
+  background-color: $candy
+footer
+  background-color: $peppermint
+  padding: 10px
+  
+.parent
+  display: flex
+  +break(1600px)
+    // flex-direction: column
+    flex-wrap: wrap
+  div
+    flex-basis: 350px
+    +break(1235px)
+      flex-basis: 100%
+  div > p
+    padding: 50px
+    +break(420px)
+      padding: 10px
+.child-1
+  background-color: $banana
+  flex: 1 0 0
+.child-2
+  background-color: $candy
+  flex: 1 0 0
+.child-3
+  background-color: $peppermint
+  flex: 1 0 0

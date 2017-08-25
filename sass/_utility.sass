@@ -1,0 +1,79 @@
+//font
+=font($rem)
+  font-size: $rem
+=line($heightValue)
+  line-height: $heightValue + rem
+  line-height: (1.5 * $heightValue) + rem
+// spacing
+=pads($padding-top, $padding-right, $padding-bottom, $padding-left)
+  padding-top: $padding-top +rem
+  padding-right: $padding-right +rem
+  padding-bottom: $padding-bottom +rem
+  padding-left: $padding-left +rem
+=pad($padding)
+  padding: $padding +rem
+=margins($margin-top, $margin-right, $margin-bottom, $margin-left)
+  margin-top: $margin-top + rem
+  margin-right: $margin-right + rem
+  margin-bottom: $margin-bottom + rem
+  margin-left: $margin-left + rem
+=margin($margin)
+  margin: $margin +rem
+// alignment
+=centercenter
+  text-align: center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+=center
+  text-align: center
+=left
+  text-align: left
+=right
+  text-align: right
+=float
+  float: left
+=floater
+  float: right
+=nofloat
+  float: none
+// images and divs
+=cover-fixed
+  height: 100vh
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+=cover-scroll
+  height: 100vh
+  background-size: cover
+  background-position: center
+  background-attachment: scroll
+// decoration
+=border($rem)
+  border: $rem solid black
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+=borders($border-top, $border-right, $border-bottom, $border-left, $border-radius, $border-style, $border-color)
+  border-top: $border-top +rem
+  border-right: $border-right +rem
+  border-bottom: $border-bottom +rem
+  border-left: $border-left +rem
+  border-radius: $border-radius +rem
+  border-style: $border-style
+  border-color: $border-color
+=outline($width, $style, $color, $offset)
+  outline-width: $width +rem
+  outline-style: $style
+  outline-color: $color
+  outline-offset: $offset +rem
+=shadow
+  box-shadow: 5rem 5rem 0rem 1rem rgba(0,0,0,0.5)
+
+//special
+=highlight
+  background: $highlight
+  color: $notBlack

@@ -1,0 +1,152 @@
+// FONT FAMILY VARIABLES
+// FONT WEIGHT VARIABLES
+// FONT MIXINS
+// FONT FAMILY USAGE DEFINITIONS
+// LET THERE BE JUSTICE
+
+/*    font (size, weight, height, color)     */
+/*    +meri(.6, 100, 1.6, $notBlack)           */
+
+/* font-family variables */
+$lato: "Lato", sans-serif
+// 100 300 400 700 900 + i :::: GENERAL
+$neue: "Helvetica Neue", sans-serif
+// $LIGHT $REGULAR $BOLD :::: GENERAL
+$robo: "Roboto", sans-serif
+// $light $regular $bold :::: $BOLD @30px & $LIGHT
+$play: "Playfair", sans-serif
+// 400+i 700+i 900+i :::: HEADLINES $BOLD
+$droid: "Droid Serif", serif
+// 400+i 700+i :::: PARAGRAPHS 22PX/400/1.6
+$meri: "Merriweather", serif
+// 300 400 700 800 +i :::: PARAGRAPHS & $BOLD @30px-40px
+$aleg: "Alegreya", sans-serif
+// 300+i 400+i 700+i 900+i :::: PARAGRAPHS
+$fira: "Fira Sans", sans-serif
+// fira 300+i 400+i 500+i 700+i :::: PARAGRAPHS
+$raleway: "Raleway", sans-serif
+// 100 300 900 :::: PARAGRAPHS DELICATE IN $LIGHT
+$open: "Open Sans", sans-serif
+// 300+i 400+i 600+i 700+i 800+i
+$mono: "Monospace", sans-serif
+// $LIGHT $REGULAR $BOLD :::: UNDECIDED
+
+/* weight */
+$light: 100
+$regular: 300
+$bold: 900
+
+/* font mixins :::: example ::::: +roboto(1.5, 100, .8, $white)  */
+
+=lato($fontSize, $weight, $heightValue, $color)
+  font-family: $lato
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=neue($fontSize, $weight, $heightValue, $color)
+  font-family: $neue
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=robo($fontSize, $weight, $heightValue, $color)
+  font-family: $robo
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=play($fontSize, $weight, $heightValue, $color)
+  font-family: $play
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=droid($fontSize, $weight, $heightValue, $color)
+  font-family: $droid
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=meri($fontSize, $weight, $heightValue, $color )
+  font-family: $meri
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=aleg($fontSize, $weight, $heightValue, $color)
+  font-family: $aleg
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=fira($fontSize, $weight, $heightValue, $color)
+  font-family: $fira
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=raleway($fontSize, $weight, $heightValue, $color)
+  font-family: $raleway
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=open($fontSize, $weight, $heightValue, $color)
+  font-family: $open
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+=mono($fontSize, $weight, $heightValue, $color)
+  font-family: $mono
+  font-size: $fontSize + px
+  font-size: (1 * $fontSize) + rem
+  font-weight: $weight
+  line-height: $heightValue
+  line-height: (1 * $heightValue)
+  color: $color
+
+/* ******* FONT FAMILY USAGE DEFINITIONS ********/
+// Lato : General purpose
+// Roboto : clean modern GOTO FOR BASIC TEXT
+
+// Playfair : LOOKS GREAT $BOLD also neat paragraph text
+// Open Sans : modern and clean best on paragraphs
+// Droid Serif : GREAT FOR PARAGRAPHS
+// Merriweather : GOOD FOR LONG PARAGRAPHS AND LONG FORM TEXT
+// Alegreya : GOOD FOR LONG PARAGRAPHS AND LONG FORM TEXT
+// Fira Sans : GOOD FOR PARAGRAPHS
+// Raleway : has a 'v cross' 'W' better for paragraph text & DELICATE IN $LIGHT
+
+// ***************************************************************

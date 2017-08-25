@@ -1,0 +1,211 @@
+/* bourbon
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
++size(50px 100px)
++position(absolute, auto .1em .5em null)
+
+$helvetica > auto adds fallbacks
+font-size: em(12)  > converts pixels to ems add ( ,24) for basefont size
+
+color: tint(red, 10%)
+
++clearfix
+
+/* bourbon neat > 12 column grid example
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section
+  @include outer-container
+  aside
+    @include span-column(3)
+  article
+    @include span-column(9)
+
+/* social icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+<img class="icons git" src="img/icons/github.svg" alt="">
+<img class="icons insta" src="img/icons/instagram.svg" alt="">
+sass
+.icons
+  +size(30px)
+  margin-right: 30px
+.git
+  background: red
+.insta
+  background: blue
+  margin-left: -10px
+
+/* animated grain
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  animation: #{$str}
+
++keyframes('grain')
+  0%, 100%
+    +transform(translate(0, 0))
+  10%
+    +transform(translate(-5%, -10%))
+  20%
+    +transform(translate(-15%, 5%))
+  30%
+    +transform(translate(7%, -25%))
+  40%
+    +transform(translate(-5%, 25%))
+  50%
+    +transform(translate(-15%, 10%))
+  60%
+    +transform(translate(15%, 0%))
+  70%
+    +transform(translate(0%, 15%))
+  80%
+    +transform(translate(3%, 35%))
+  90%
+    +transform(translate(-10%, 10%))
+
+=grain
+  overflow: hidden
+
+  > *
+    z-index: 2
+
+  &:after
+    +animation(grain 5s steps(10) infinite)
+    background: url(http:srrc.com/grain.png)
+    content: ''
+    display: block
+    height: 300%
+    left: -100%
+    position: absolute
+    top: -100%
+    width: 300%
+    z-index: 1
+    opacity: .5
+
+blink
+  background: url(http://srrc.com/600.jpg) no-repeat center center
+  background-size: cover
+  display: block
+  height: 100vh
+  position: relative
+  width: 100vw
+  +grain
+
+/* Animation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+http://www.w3schools.com/cssref/css_animatable.asp
+
+animation: makeMeAnimate 1s infinite
+  @keyframes makeMeAnimate
+    50%
+      padding: 50px
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fork-tag
+  position: absolute
+  top: 10px
+  right: -10px
+  background: $blue
+  color: white
+  padding: 2px 6px
+  transition: all 0.3s ease-in-out
+  transform-origin: top right
+
+  &:hover
+    color: white
+    animation: wiggle 0.4s linear 1
+
+//
+@keyframes wiggle
+  0%
+    transform: rotate(0deg)
+  20%
+    transform: rotate(8deg)
+  50%
+    transform: rotate(-8deg)
+  80%
+    transform: rotate(8deg)
+  100%
+    transform: rotate(0deg)
+
+//
+body
+  -webkit-tap-highlight-color: #FFF498
+
+/* Basic Text Style
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+color: darken($fladReg, 10%)
+
+p
+  margin: 0 0 20px 0
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+hr
+  border: solid #ddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+
+/* stop highlighting on multiple clicks
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+user-select: none
+
+::selection
+  background: #FFF498
+
+::-moz-selection
+  background: #FFF498
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+/* font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+font-family: 'Fira Sans', sans-serif
+color: #666
+-webkit-font-smoothing: antialiased
+-webkit-text-size-adjust: 100%
+
+/* links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a
+  color: #0074D9
+  text-decoration: none
+  outline: 0
+  &:hover,
+  &:focus
+    color: lighten(#0074D9, 20%)
+
+/* SASS nesting example
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header
+  width: 135px
+  .logo
+    +hide-text
+    background:
+      image: url(img/example.png)
+      repeat: no-repeat
+      position: center
+      size: contain
+      color: yellow
+    height: 200px
